@@ -4,6 +4,7 @@ const helmet = require("helmet");
 const cors = require("cors");
 const verify = require("./verify");
 const compression = require("compression");
+const path = require("path");
 
 
 
@@ -32,7 +33,7 @@ app.use(express.json());
 
 
 
-app.use(express.static('public/dist'));
+app.use(express.static(path.join(__dirname, 'public/dist')));
 
 
 app.get("/", (req, res) => {
