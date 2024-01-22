@@ -41,12 +41,10 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static( path.join(__dirname, 'public', '/', 'dist')));
 
   // Handle all other routes by serving the React app's entry point
-  app.get("/api", verify, (req, res) => {
-    return res.json({
-      Node: "Welcome to node api",
-    });
-  });
+ 
   app.get('/*', (req, res) => {
+
+    console.log(req.url)
     res.sendFile(path.join(__dirname, 'public', '/', 'dist', 'index.html'));
   });}
 
