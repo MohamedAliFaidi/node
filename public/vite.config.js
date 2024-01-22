@@ -19,6 +19,14 @@ export default defineConfig({
         target: "https://node-sage-six.vercel.app",
         changeOrigin: true,
       },
+      "/api/v1": {
+        target: "https://node-git-main-mohamedalifaidi.vercel.app",
+        changeOrigin: true,
+      },
+      "/api/v2": {
+        target: "https://node-res2s48hy-mohamedalifaidi.vercel.app",
+        changeOrigin: true,
+      },
     },
   },
   // optimizeDeps: {
