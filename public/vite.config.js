@@ -21,9 +21,9 @@ export default defineConfig({
       },
     },
   },
-  optimizeDeps: {
-    include: ["axios"], // Include axios in the optimized dependencies
-  },
+  // optimizeDeps: {
+  //   include: ["axios"], // Include axios in the optimized dependencies
+  // },
   // Add Content Security Policy configuration
   // Make sure to replace 'https://node-sage-six.vercel.app' with your actual API domain
   serverMiddleware: {

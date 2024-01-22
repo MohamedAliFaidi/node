@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <button
       onClick={()=>{
-        fetch("https://node-sage-six.vercel.app/api").then((response)=>{
+        fetch("/api").then((response)=>{
           return response.json()
         }).then((data)=>{
           console.log(data)
