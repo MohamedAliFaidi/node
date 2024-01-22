@@ -14,12 +14,6 @@
             "src": "/.*",
             "dest": "index.js"
         }
-    ],
-    "headers": [
-        {
-          "key": "default-src",
-          "value": "https://node-sage-six.vercel.app"
-        }
-      ]
+    ]
     
 }
