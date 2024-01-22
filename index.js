@@ -30,7 +30,6 @@ app.disable("x-powered-by");
 
 app.use(express.json());
 
-dbConnect();
 
 
 app.use(express.static('public/dist'));
