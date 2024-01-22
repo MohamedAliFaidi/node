@@ -33,11 +33,11 @@ app.use(express.json());
 
 
 
-app.use(express.static(path.join(__dirname, 'public/dist')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/dist/index.html");
+  res.sendFile(__dirname + "/dist/index.html");
 });
 
 app.get("/api", verify, (req, res) => {
