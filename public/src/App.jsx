@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <button
       onClick={()=>{
-        fetch("/v1/api").then((response)=>{
+        fetch("v1/api").then((response)=>{
           return response.json()
         }).then((data)=>{
           console.log(data)
