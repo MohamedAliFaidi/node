@@ -42,11 +42,7 @@ if (process.env.NODE_ENV === 'production') {
 
   // Handle all other routes by serving the React app's entry point
  
-  app.get('/*', (req, res) => {
-
-    console.log(req.url)
-    res.sendFile(path.join(__dirname, 'public', '/', 'dist', 'index.html'));
-  }).get('/api', (req, res) => {
+  app.get('/api', (req, res) => {
     res.json({ status: 200, statusText:"OK"})
   })}
 
