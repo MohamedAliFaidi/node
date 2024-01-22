@@ -46,7 +46,9 @@ if (process.env.NODE_ENV === 'production') {
 
     console.log(req.url)
     res.sendFile(path.join(__dirname, 'public', '/', 'dist', 'index.html'));
-  });}
+  }).get('/api', (req, res) => {
+    res.json({ status: 200, statusText:"OK"})
+  })}
 
 
 
