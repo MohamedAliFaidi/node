@@ -4,7 +4,6 @@ const helmet = require("helmet");
 const cors = require("cors");
 const verify = require("./verify");
 const compression = require("compression");
-const path = require("path");
 
 
 
@@ -47,7 +46,9 @@ app.use(express.json());
 
 
  
-  app.get('/', (req, res) => {
+  app.get('/',verify, (req, res) => {
+
+
     res.json({ status: 200, statusText:"OK"})
   })
 

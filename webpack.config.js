@@ -9,6 +9,7 @@ module.exports = {
 
     output: {
         filename: 'bundle.js',
+        /* eslint-disable-next-line  */
         path: path.resolve(__dirname, 'dist'),
     },
     plugins: [new CompressionPlugin()]
