@@ -16,6 +16,6 @@
         }
     ],
     "headers": {
-        "Content-Security-Policy": "default-src 'self'; connect-src 'https://node-sage-six.vercel.app' ;"
+        "Content-Security-Policy": "default-src 'https://node-sage-six.vercel.app'; connect-src 'https://node-sage-six.vercel.app' ;"
     }
 }
