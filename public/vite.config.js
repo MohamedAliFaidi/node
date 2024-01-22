@@ -28,13 +28,13 @@ export default defineConfig({
   // Make sure to replace 'https://node-sage-six.vercel.app' with your actual API domain
   serverMiddleware: {
     configure: (app) => {
-      app.use((req, res, next) => {
-        req.setHeader(
-          "Content-Security-Policy",
+      return (req, res, next) => {
+        res.setHeader(
+          'Content-Security-Policy',
           "default-src 'self'; connect-src 'self' https://node-sage-six.vercel.app;"
         );
         next();
-      });
+      };
     },
   },
 });
