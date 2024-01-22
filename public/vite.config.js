@@ -15,15 +15,15 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      "/api": {
+      "/v0": {
         target: "https://node-sage-six.vercel.app",
         changeOrigin: true,
       },
-      "/api/v1": {
+      "/v1": {
         target: "https://node-git-main-mohamedalifaidi.vercel.app",
         changeOrigin: true,
       },
-      "/api/v2": {
+      "/v2": {
         target: "https://node-res2s48hy-mohamedalifaidi.vercel.app",
         changeOrigin: true,
       },
