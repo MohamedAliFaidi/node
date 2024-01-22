@@ -1,20 +1,21 @@
 {
     "builds": [
-      {
-        "src": "index.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "public/dist/**",
-        "use": "@vercel/node"
-      }
+        {
+            "src": "index.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "public/dist/**",
+            "use": "@vercel/node"
+        }
     ],
     "routes": [
-      {
-        "src": "/.*",
-        "dest": "index.js"
-      }
-      
-    ]
-  }
-  
+        {
+            "src": "/.*",
+            "dest": "index.js"
+        }
+    ],
+    "headers": {
+        "Content-Security-Policy": "default-src 'self'; connect-src 'https://node-sage-six.vercel.app' ;"
+    }
+}
