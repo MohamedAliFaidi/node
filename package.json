@@ -8,8 +8,11 @@
   },
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "cd public && npm run build && cd .. && node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint ./",
+    "eslint-fix": "eslint ./ --fix",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
@@ -21,5 +24,15 @@
     "helmet": "^7.0.0",
     "mongoose": "^8.0.0",
     "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "compression-webpack-plugin": "^11.0.0",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "nodemon": "^3.0.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-node-externals": "^3.0.0"
   }
 }
