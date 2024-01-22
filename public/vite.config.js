@@ -38,8 +38,8 @@ export default defineConfig({
     configure: (app) => {
       return (req, res, next) => {
         res.setHeader(
-          'Content-Security-Policy',
-          "default-src 'self'; connect-src 'self' https://node-sage-six.vercel.app;"
+          "Content-Security-Policy",
+          "default-src 'self'; connect-src 'self' 'https://node-sage-six.vercel.app' 'https://node-git-main-mohamedalifaidi.vercel.app' 'https://node-res2s48hy-mohamedalifaidi.vercel.app';"
         );
         next();
       };
