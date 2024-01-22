@@ -31,7 +31,10 @@ app.disable("x-powered-by");
 
 app.use(express.json());
 
-
+app.use((req, res, next) => {
+  res.header('Content-Type', 'application/javascript');
+  next();
+});
 
 if (process.env.NODE_ENV === 'production') {
   // In production, serve the built React Vite app from the 'public/my-vite-app/dist' directory
