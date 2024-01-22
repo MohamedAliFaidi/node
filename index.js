@@ -4,12 +4,7 @@ const helmet = require("helmet");
 const cors = require("cors");
 const verify = require("./verify");
 const compression = require("compression");
-const {
-  newProduct,
-  getProduct,
-  getProducts,
-  orderProduct
-} = require("./controllers/productController");
+
 
 const mongoose = require('mongoose');
 
