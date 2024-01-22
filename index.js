@@ -50,7 +50,10 @@ app.use(express.json());
 
 dbConnect();
 
-app.get("/", verify, (req, res) => {
+
+app.use(express.static('public/dist'));
+
+app.get("/api", verify, (req, res) => {
   return res.json({
     Node: "Welcome to node api",
   });
