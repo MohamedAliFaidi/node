@@ -35,7 +35,7 @@ app.use(express.json());
 
 if (process.env.NODE_ENV === 'production') {
   // In production, serve the built React Vite app from the 'public/my-vite-app/dist' directory
-  app.use(express.static(path.join(__dirname, 'public', '/', 'dist')));
+  app.use(path.join(__dirname, 'public', '/', 'dist'));
 
   // Handle all other routes by serving the React app's entry point
   app.get('*', (req, res) => {
