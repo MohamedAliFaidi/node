@@ -29,7 +29,7 @@ export default defineConfig({
   serverMiddleware: {
     configure: (app) => {
       app.use((req, res, next) => {
-        res.setHeader(
+        req.setHeader(
           "Content-Security-Policy",
           "default-src 'self'; connect-src 'self' https://node-sage-six.vercel.app;"
         );
