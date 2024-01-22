@@ -18,14 +18,17 @@ export default defineConfig({
       "/v0": {
         target: "https://node-sage-six.vercel.app",
         changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/v0/, ""), 
       },
       "/v1": {
         target: "https://node-git-main-mohamedalifaidi.vercel.app",
         changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/v1/, ""),
       },
       "/v2": {
         target: "https://node-res2s48hy-mohamedalifaidi.vercel.app",
         changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/v2/, ""),
       },
     },
   },
