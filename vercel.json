@@ -15,7 +15,11 @@
             "dest": "index.js"
         }
     ],
-    "headers": [{
-        "Content-Security-Policy": "default-src 'https://node-sage-six.vercel.app'; connect-src 'https://node-sage-six.vercel.app' ;"
-    }]
+    "headers": [
+        {
+          "key": "default-src",
+          "value": "https://node-sage-six.vercel.app"
+        }
+      ]
+    
 }
