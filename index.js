@@ -34,6 +34,11 @@ app.use(express.json());
 
 app.use(express.static('public/dist'));
 
+
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/public/dist/index.html");
+});
+
 app.get("/api", verify, (req, res) => {
   return res.json({
     Node: "Welcome to node api",
